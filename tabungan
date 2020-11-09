@@ -1,0 +1,26 @@
+<?php
+// Create tabungan
+class Tabungan {
+    public $tambah, $ambil, $saldo;
+
+    public function getTambah(){
+        return $this->tambah;
+    }
+    public function getAmbil(){
+        return $this->ambil;
+    }
+    public function cekSaldo(){
+        return $this->saldo;
+    }
+    public function getCetak(){
+        return "Tabungan yang ditambahkan {$this->tambah} | Uang yang ingin diambil {$this->ambil} | Tabungan anda saat ini {$this->saldo}";
+    }
+
+}
+$tabungan1 = new Tabungan();
+$tabungan1->tambah=1000000;
+$tabungan1->ambil=500000;
+$tabungan1->saldo=1000000;
+
+echo $tabungan1->getCetak();
+?>
